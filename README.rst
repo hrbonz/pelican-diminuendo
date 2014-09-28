@@ -20,7 +20,7 @@ This Pelican plugin uses `python-diminuendo <https://github.com/hrbonz/python-di
 Install
 =======
 
-.. code-hilight:: sh
+.. code-block:: sh
 
     $ pip install pelican-diminuendo
 
@@ -29,7 +29,7 @@ Usage
 
 To use the plugin, add it to the PLUGINS list in your configuration file. Put it in pelicanconf.py by default:
 
-.. code-hilight:: python
+.. code-block:: python
 
     PLUGINS = [
         # ...
@@ -42,18 +42,24 @@ Development
 Test
 ----
 
-Test the package::
+Test the package:
+
+.. code-block:: sh
 
     $ python -m unittest discover
 
-Automatic testing in various environments::
+Automatic testing in various environments:
+
+.. code-block:: sh
 
     $ tox
 
 Release
 =======
 
-Use `bumpr` to release the package::
+Use `bumpr` to release the package:
+
+.. code-block:: sh
 
     $ bumpr -b -m
 

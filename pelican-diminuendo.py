@@ -42,6 +42,8 @@ def minify_html(pelican):
                             "problem minifying ({})".format(IOError))
                     finally:
                         fd.close()
+                    logger.info(
+                        "minified {} ({})".format(filename, dirpath))
                         
 
 def register():

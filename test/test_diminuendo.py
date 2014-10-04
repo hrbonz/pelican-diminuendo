@@ -20,7 +20,6 @@ class TestDiminuendo(unittest.TestCase):
             os.path.join(here, 'pelican.conf'),
             override={'PATH': os.path.join(here, 'content')})
 
-        print self.settings['PATH']
         cls = self.settings['PELICAN_CLASS']
         if isinstance(cls, six.string_types):
             module, cls_name = cls.rsplit('.', 1)

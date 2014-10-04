@@ -1,5 +1,5 @@
 [bumpr]
-file = pelican-diminuendo/__init__.py
+file = pelican-diminuendo.py
 vcs = git
 clean =
     python setup.py clean

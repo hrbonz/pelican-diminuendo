@@ -48,3 +48,4 @@ class TestDiminuendo(unittest.TestCase):
         resultfd = open(os.path.join(here, self.settings['OUTPUT_PATH'],
                                  'pages/about.html'))
         self.assertEqual(resultfd.read(83), """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>About me</title>""")
+        resultfd.close()

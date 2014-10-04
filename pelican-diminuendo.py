@@ -33,17 +33,19 @@ def minify_html(pelican):
         for filename in filenames:
             if filename.endswith('.html'):
                 filepath = os.path.join(dirpath, filename)
-                code = open(filepath, encoding='utf-8').read()
-                with open(filepath, 'w', encoding='utf-8') as fd:
+                fdin = open(filepath, encoding='utf-8')
+                code = fdin.read()
+                with open(filepath, 'w', encoding='utf-8') as fdout:
                     try:
-                        fd.write(htmlmin.minify(code))
+                        fdout.write(htmlmin.minify(code))
                     except IOError:
                         logger.error(
                             "problem minifying ({})".format(IOError))
                     finally:
-                        fd.close()
-                    logger.info(
-                        "minified {} ({})".format(filename, dirpath))
+                        fdout.close()
+                fdin.close()
+                logger.info(
+                    "minified {} ({})".format(filename, dirpath))
                         
 
 def register():

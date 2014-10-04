@@ -7,8 +7,12 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 long_description = open(os.path.join(here, 'README.rst')).read()
 
+# list requirements for setuptools
+requirements = [name.rstrip() for name in open(os.path.join(here,
+                'requirements.txt')).readlines()]
+
 # allow setup.py to be run from any path
-#os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+os.chdir(os.path.normpath(here))
 
 setup(
     name='pelican-diminuendo',
@@ -20,6 +24,7 @@ setup(
     url='https://github.com/hrbonz/pelican-diminuendo',
     description='HTML minifier plugin for Pelican',
     long_description=long_description,
+    install_requires=requirements,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',

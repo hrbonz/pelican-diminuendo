@@ -1,5 +1,6 @@
 # dev stuff
 dev_*
+test/pelican.confc
 # setuptools
 build
 dist

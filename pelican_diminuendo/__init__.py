@@ -17,7 +17,7 @@ if not six.PY3:
 __author__ = "Stefan \"hr\" Berder"
 __contact__ = "hr@bonz.org"
 __license__ = "BSD 3-Clause"
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 logger = logging.getLogger(__name__)
 

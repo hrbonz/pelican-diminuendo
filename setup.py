@@ -16,7 +16,7 @@ os.chdir(os.path.normpath(here))
 
 setup(
     name='pelican-diminuendo',
-    version="0.2.0",
+    version="0.2.1",
     author="Stefan \"hr\" Berder",
     author_email="hr@bonz.org",
     license="BSD 3-Clause",
